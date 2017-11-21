@@ -19,12 +19,12 @@ Phototouch is a touch based photobooth. It will enable you to take two picture o
 
 ### Capture an image by touching each other
 Software used : Processing
-`<addr>`(This code works for capturing one picture when two people touch each other)
+(This code works for capturing one picture when two people touch each other)
 
 First, you have to install a library called IPCapture. To do so, go in sketch/import a library/add a library, serach for IPCapture and click on "install".
 ![](https://github.com/SandraParriaud/Phototouch/blob/master/images/import_library.png)
 
-Then, here is the code
+Then, here is the code 
 ```javascript
 import processing.video.*;
 
@@ -66,7 +66,9 @@ void draw() {
   // resizing, transformations, or tint.
   //set(0, 0, cam);                                                                  
 }                          
-                  
+```
+To save the capture you've juste made in a file
+```javascript
 void keyPressed() {
   saveFrame("capture.png");
 }          
@@ -80,36 +82,37 @@ Software used : Arduino + Processing
 Arduino connectings 
 
 In Arduino
+First enter the pin number of the sensor's ouput
 ```javascript
-// this constant won't change. It's the pin number of the sensor's output:
 const int pingPin = 7;
-
+```
+Then, initialize serial communication
+```javascript
 void setup() {
-  // initialize serial communication:
   Serial.begin(9600);
 }
-
+```
+Establish variables for duration of the ping, and the distance result in centimeters
+```javascript
 void loop() {
-  // establish variables for duration of the ping, and the distance result
-  // in centimeters:
   long duration, cm;
-
-  // The PING))) is triggered by a HIGH pulse of 2 or more microseconds.
-  // Give a short LOW pulse beforehand to ensure a clean HIGH pulse:
+```
+The PING))) is triggered by a HIGH pulse of 2 or more microseconds. Give a short LOW pulse beforehand to ensure a clean HIGH pulse
+```javascript
   pinMode(pingPin, OUTPUT);
   digitalWrite(pingPin, LOW);
   delayMicroseconds(2);
   digitalWrite(pingPin, HIGH);
   delayMicroseconds(5);
   digitalWrite(pingPin, LOW);
-
-  // The same pin is used to read the signal from the PING))): a HIGH pulse
-  // whose duration is the time (in microseconds) from the sending of the ping
-  // to the reception of its echo off of an object.
+```
+The same pin is used to read the signal from the PING : a HIGH pulse whose duration is the time (in microseconds) from the sending of the ping to the reception of its echo off of an object.
+```javascript
   pinMode(pingPin, INPUT);
   duration = pulseIn(pingPin, HIGH);
-
-  // convert the time into a distance
+```
+Convert the time into a distance and print it
+```javascript
   cm = microsecondsToCentimeters(duration);
 
   Serial.print(cm);
@@ -117,14 +120,14 @@ void loop() {
 
   delay(10);
 }
-
+```
+ The speed of sound is 340 m/s or 29 microseconds per centimeter. The ping travels out and back, so to find the distance of the object we take half of the distance travelled.
+```javascript
 long microsecondsToCentimeters(long microseconds) {
-  // The speed of sound is 340 m/s or 29 microseconds per centimeter.
-  // The ping travels out and back, so to find the distance of the object we
-  // take half of the distance travelled.
   return microseconds / 29 / 2;
 }
 ```
+
 In Processing
 ```javascript
 import processing.serial.*;
