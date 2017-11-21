@@ -13,8 +13,8 @@ Phototouch is a touch based photobooth. It will enable you to take two picture o
 * 2 screens
 
 ### Required Software
-Arduino
-Processing
+* Arduino
+* Processing
 
 
 ### Capture an image by touching each other
