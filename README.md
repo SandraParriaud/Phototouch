@@ -3,14 +3,14 @@ Phototouch is a touch based photobooth. It will enable you to take two picture o
 
 
 ### Required materials
-1 Arduino uno
-1 Ultrasonic sensor 
-3 Jumper cables
+* 1 Arduino uno
+* 1 Ultrasonic sensor 
+* 3 Jumper cables
 
-1 Makey makey
-2 Alligator Clips
+* 1 Makey makey
+* 2 Alligator Clips
 
-2 screens
+* 2 screens
 
 ### Required Software
 Arduino
