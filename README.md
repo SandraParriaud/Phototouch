@@ -22,6 +22,8 @@ Software used : Processing
 (This code works for capturing one picture when two people touch each other)
 
 First, you have to install a library called IPCapture. To do so, go in sketch/import a library/add a library, serach for IPCapture and click on "install".
+![](https://github.com/SandraParriaud/Phototouch/blob/master/images/import_library.png)
+
 Then, here is the code
 ```javascript
 import processing.video.*;
