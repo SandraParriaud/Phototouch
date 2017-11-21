@@ -18,8 +18,8 @@ Phototouch is a touch based photobooth. It will enable you to take two picture o
 
 
 ### Capture an image by touching each other
->Software used : Processing
->(This code works for capturing one picture when two people touch each other)
+Software used : Processing
+`<addr>`(This code works for capturing one picture when two people touch each other)
 
 First, you have to install a library called IPCapture. To do so, go in sketch/import a library/add a library, serach for IPCapture and click on "install".
 ![](https://github.com/SandraParriaud/Phototouch/blob/master/images/import_library.png)
