@@ -18,7 +18,12 @@ Processing
 
 
 ### Capture an image by touching each other
+Software used : Processing
 (This code works for capturing one picture when two people touch each other)
+
+First, you have to install a library called IPCapture. To do so, go in sketch/import a library/add a library, serach for IPCapture and click on "install".
+Then, here is the code
+
 
 
 ### Warmer the color of the screen as you come closer from the ultrasonic sensor
