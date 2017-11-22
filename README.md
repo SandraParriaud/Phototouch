@@ -3,7 +3,7 @@
 Phototouch is a touch based photobooth. It will enable you to take two picture of two people and to mix it so that you obtain a new picture : a meeting picture.
 
 
-### Required materials
+#### Required materials
 * 1 Arduino uno
 * 1 Ultrasonic sensor 
 * 3 Jumper cables
@@ -13,13 +13,18 @@ Phototouch is a touch based photobooth. It will enable you to take two picture o
 
 * 2 screens
 
-### Required Software
+#### Required Software
 * Arduino
 * Processing
 
 
-### Capture an image by touching each other
-Software used : Processing <br/>
+## Capture an image by touching each other
+###### Software used 
+* Processing
+###### Hardware used 
+* 1 Makey makey
+* 2 Alligator Clips
+
 (This code works for capturing one picture when two people touch each other)
 
 First, you have to install a library called IPCapture. To do so, go in sketch/import a library/add a library, serach for IPCapture and click on "install".
@@ -77,9 +82,14 @@ void keyPressed() {
 
 
 
-### Warmer the color of the screen as you come closer from the ultrasonic sensor
-Software used : Arduino + Processing <br/>
-Hardware used : ultrasonic sensor, 3 jumper cables, arduino uno <br/><br/>
+## Warmer the color of the screen as you come closer from the ultrasonic sensor
+###### Software used
+* Arduino
+* Processing
+###### Hardware used
+* 1 ultrasonic sensor
+* 3 jumper cables
+* arduino uno <br/><br/>
 
 Arduino connectings (here, I used a 3 pins ultrasonic sensor)
 ![](https://github.com/SandraParriaud/Phototouch/blob/master/images/ultrasonic_sensor.png)
@@ -192,8 +202,9 @@ void serialEvent(Serial p) {
 ```
 
 
-### Mix two pictures together
-Software required : Processing
+## Mix two pictures together
+###### Software required
+* Processing
 
 Now we are going to mix two pictures together. The result looks like that
 ![](https://github.com/SandraParriaud/Phototouch/blob/master/images/Capture%20d%E2%80%99%C3%A9cran%202017-11-22%20%C3%A0%2009.59.54.png)
@@ -274,6 +285,7 @@ Then we draw color rectangles which corresponds to the crops so that the picture
     noFill();
   }
 ```
+<br/>
 And that's all ! You see, it's not so difficult ;)
 
 ![](https://github.com/SandraParriaud/Phototouch/blob/master/images/Shaking_hands.jpg)
