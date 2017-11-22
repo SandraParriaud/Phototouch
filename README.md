@@ -1,4 +1,5 @@
 # Phototouch
+![](https://github.com/SandraParriaud/Phototouch/blob/master/images/Presentation.jpg)
 Phototouch is a touch based photobooth. It will enable you to take two picture of two people and to mix it so that you obtain a new picture : a meeting picture.
 
 
@@ -67,7 +68,7 @@ void draw() {
   //set(0, 0, cam);                                                                  
 }                          
 ```
-To save the capture you've juste made in a file
+To save the capture you've juste made in a file, add a new loop :
 ```javascript
 void keyPressed() {
   saveFrame("capture.png");
@@ -77,11 +78,13 @@ void keyPressed() {
 
 
 ### Warmer the color of the screen as you come closer from the ultrasonic sensor
-Software used : Arduino + Processing
+Software used : Arduino + Processing <br/>
+Hardware used : ultrasonic sensor, 3 jumper cables, arduino uno <br/><br/>
 
-Arduino connectings 
+Arduino connectings (here, I used a 3 pins ultrasonic sensor)
+![](https://github.com/SandraParriaud/Phototouch/blob/master/images/ultrasonic_sensor.png)
 
-#### In Arduino <br/>
+#### Code in Arduino
 First enter the pin number of the sensor's ouput
 ```javascript
 const int pingPin = 7;
@@ -128,7 +131,7 @@ long microsecondsToCentimeters(long microseconds) {
 }
 ```
 
-#### In Processing
+#### Code in Processing
 ```javascript
 import processing.serial.*;
 Serial myPort;
@@ -193,6 +196,8 @@ void serialEvent(Serial p) {
 Software required : Processing
 
 Now we are going to mix two pictures together. The result looks like that
+![](https://github.com/SandraParriaud/Phototouch/blob/master/images/Capture%20d%E2%80%99%C3%A9cran%202017-11-22%20%C3%A0%2009.59.54.png)
+![](https://github.com/SandraParriaud/Phototouch/blob/master/images/Capture%20d%E2%80%99%C3%A9cran%202017-11-22%20%C3%A0%2009.46.57.png)
 
 First, you create two image variables
 ```javascript
@@ -271,3 +276,4 @@ Then we draw color rectangles which corresponds to the crops so that the picture
 ```
 And that's all ! You see, it's not so difficult ;)
 
+![](https://github.com/SandraParriaud/Phototouch/blob/master/images/Shaking_hands.jpg)
